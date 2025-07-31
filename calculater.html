@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <center><marquee direction="right" scrollamount="15" style="background-color: brown; color:white;"> 
+     <p >Calculater</p></marquee>
+    Num 1:<input type="number" name="text1"/><br/><br/>
+    Num 2:<input type="number" name="text2"/><br/><br/>
+    Num 3:<input type="number" name="text3"/><br/><br/>
+    Num 4:<input type="number" name="text4"/><br/><br/>
+    <input type="button" onclick="sum()" value="SUM">
+        <input type="button" onclick="sub()" value="SUB">
+
+            <input type="button" onclick="mul()" value="MUL">
+
+                <input type="button" onclick="div()" value="DIV">
+
+</body></center>
+<p id="my"></p>
+<script>
+      function sum(){
+       var a = document.getElementsByName("text1")[0].value
+       var b = document.getElementsByName("text2")[0].value
+       var c = document.getElementsByName("text3")[0].value
+       var d = document.getElementsByName("text4")[0].value
+       var e = parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d);
+
+       document.getElementById("my").innerHTML = "SUM IS  "  + e;
+
+       
+      }
+      function sub(){
+       var a = document.getElementsByName("text1")[0].value
+       var b = document.getElementsByName("text2")[0].value
+       var c = document.getElementsByName("text3")[0].value
+       var d = document.getElementsByName("text4")[0].value
+       var e = parseInt(a)-parseInt(b)-parseInt(c)-parseInt(d)
+
+       document.getElementById("my").innerHTML = "SUB IS " + e;
+      }
+      function mul(){
+      var a = document.getElementsByName("text1")[0].value
+       var b = document.getElementsByName("text2")[0].value
+       var c = document.getElementsByName("text3")[0].value
+       var d = document.getElementsByName("text4")[0].value
+       var e = parseInt(a)*parseInt(b)*parseInt(c)*parseInt(d)
+
+       document.getElementById("my").innerHTML = "MUL  IS " + e;
+      }
+      function div(){
+       var a = document.getElementsByName("text1")[0].value
+       var b = document.getElementsByName("text2")[0].value
+       var c = document.getElementsByName("text3")[0].value
+       var d = document.getElementsByName("text4")[0].value
+       var e = parseInt(a)/parseInt(b)/parseInt(c)/parseInt(d)
+
+       document.getElementById("my").innerHTML = "DIV IS " + e;
+      }
+</script>
+</html>
