@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Login Form</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffffcc;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #999;
+            margin-bottom: 15px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="button"] {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.4s;
+            width: 100%;
+        }
+
+        input[type="button"]:hover {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+        }
+
+        marquee {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff1493;
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+
+        .output input {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        function login(){
+            var a = myform.text1.value;
+            var b = myform.text2.value;
+
+            var genderElems = myform.text3;
+            var genderValue = "";
+            for (var i = 0; i < genderElems.length; i++) {
+                if (genderElems[i].checked) {
+                    genderValue = genderElems[i].value;
+                    break;
+                }
+            }
+
+            var hobbies = myform.text4;
+            var hobbyList = [];
+            for (var i = 0; i < hobbies.length; i++) {
+                if (hobbies[i].checked) {
+                    hobbyList.push(hobbies[i].value);
+                }
+            }
+
+            var d = hobbyList.join(", ");
+            var e = myform.text5.value;
+
+            myform.text6.value = a;
+            myform.text7.value = b;
+            myform.text8.value = genderValue;
+            myform.text9.value = d;
+            myform.text10.value = e;
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" id="myform">
+        <marquee bgcolor="lightpink" direction="right"><h1>Login Form</h1></marquee>
+
+        Enter Name: <input type="text" name="text1"/><br/>
+        Enter Mno: <input type="number" name="text2"/><br/>
+
+        Gender: 
+        <input type="radio" name="text3" value="Male"/>Male
+        <input type="radio" name="text3" value="Female"/>Female<br/><br/>
+
+        Hobby: 
+        <input type="checkbox" name="text4" value="Reading"/>Reading
+        <input type="checkbox" name="text4" value="Dancing"/>Dancing
+        <input type="checkbox" name="text4" value="Singing"/>Singing<br/><br/>
+
+        City:
+        <select name="text5">
+            <option>------Select City--------</option>
+            <option>Ahmedabad</option>
+            <option>Surat</option>
+            <option>Vadodara</option>
+            <option>Rajkot</option>
+        </select><br/><br/>
+
+        <input type="button" value="Submit" onclick="login()"/><br/><br/>
+
+        <div class="output">
+            Name is: <input type="text" name="text6" readonly disabled><br/><br/>
+            Mno is: <input type="text" name="text7" readonly disabled><br/><br/>
+            Gender is: <input type="text" name="text8" readonly disabled><br/><br/>
+            Hobby is: <input type="text" name="text9" readonly disabled><br/><br/>
+            City is: <input type="text" name="text10" readonly disabled><br/><br/>
+        </div>
+    </form>
+</body>
+</html>
