@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function login(){
+        var a = myform.text1.value
+        var b = myform.text2.value
+        var c = myform.text3.value
+        var d = myform.text4.value
+        var e = myform.text5.value
+
+        myform.text6.value = a;
+         myform.text7.value = b;
+          myform.text8.value = c;
+           myform.text9.value = d;
+            myform.text10.value = e;
+
+
+    }
+</script>
+<center>
+<body>
+    <marquee bgcolor="lightpink"direction='right'><h1>Login Form</h1></marquee><br><br>
+    <form id="myform">
+
+         Enter name:<input type="text" name="text1"/><br/><br/>
+         Enter Mno:<input type="number" name="text2"/><br/><br/>
+         Gender:<input type="radio"name="text3" value="male"/>Male
+         <input type="radio"name="text3" value="female"/>Female<br/><br/>
+         Hobby : <input type="checkbox" name="text4"  value="Reading"/>Reading
+         <input type="checkbox" name="text4"  value="Dancing"/>Dancing
+         <input type="checkbox" name="text4" value="Singing"/>Singing<br/><br/>
+        City : <select name="text5">
+            <option>------select city ---------</option>
+            <option  >Ahmedabad</option>
+            <option  >Surat</option>
+
+        </select><br/><br/>
+        <input type="button" value="Submit" onclick="login()"/><br><br>
+
+        Name is : <input type="text" name="text6" readonly disabled><br><br>
+        Mno  is : <input type="text" name="text7" readonly disabled><br><br>
+        Gender is : <input type="text" name="text8" readonly disabled><br><br>
+        Hobby is : <input type="text" name="text9" readonly disabled><br><br>
+        City is : <input type="text" name="text10" readonly disabled><br><br>
+    </form>
+</body></center>
+</html>
