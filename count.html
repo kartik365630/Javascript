@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 0
+        var mytimer = ""
+
+        function increment(){
+            i = i + 1
+            document.getElementById("my").innerHTML=i
+            console.log(i)
+        }
+        function start(){
+            mytimer = setInterval(increment,2000)
+        }
+        function pause(){
+            clearInterval(mytimer)
+        }
+        function stop(){
+            i = 0
+            document.getElementById("my").innerHTML = 0
+            clearInterval(mytimer)
+        }
+    </script>
+    <p id="my">0</p>
+    <input type="button" onclick="start()" value="start"><br>
+    <input type="button" onclick="pause()" value="pause"><br>
+    <input type="button" onclick="stop()" value="stop"><br>
+</body>
+</html>
